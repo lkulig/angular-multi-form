@@ -50,11 +50,23 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-lg-offset-2">{{reservationData.appointment.title}}
+          <div class="col-xs-6 col-xs-offset-2" style="padding-left: 0px">{{reservationData.appointment.title}}
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-lg-offset-2">{{reservationData.jobType.name}}
+          <div class="col-xs-6 col-xs-offset-2" style="padding-left: 0px">{{reservationData.jobType.name}}
+          </div>
+        </div>
+      </div>
+      <div class="list-group-item" ng-show="reservationData.payment">
+        <div class="row">
+          <div class="col-xs-1">
+            <i class="fa fa-check"></i>
+          </div>
+          <div class="col-xs-8"> {{reservationData.payment}}
+          </div>
+          <div class="col-xs-1">
+            <a ui-sref=".time"><i class="fa fa-pencil"></i></a>
           </div>
         </div>
       </div>

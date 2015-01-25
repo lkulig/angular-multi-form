@@ -10,8 +10,7 @@ angular
     'ngTouch',
     'ngAutocomplete',
     'ui.bootstrap',
-    'ui.calendar',
-    'google.places'
+    'ui.calendar'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 

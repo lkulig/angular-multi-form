@@ -1,1 +1,16 @@
-<p>This is the form-payment view.</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-credit-card"></i> Payment
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-6">
+        <input type="radio" name="payment" ng-model="reservationData.payment" value="Credit Card"> Credit Card <i class="fa fa-cc-visa"></i> <i class="fa fa-cc-mastercard"></i><br/>
+        <input type="radio" name="payment" ng-model="reservationData.payment" value="PayPal"> PayPal <i class="fa fa-paypal"></i><br/>
+      </div>
+    </div>
+    <div align="right" style="margin-top: 10px">
+      <a ui-sref="form.payment" class="btn btn-default">Next <i class="fa fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>

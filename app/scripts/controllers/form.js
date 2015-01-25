@@ -6,6 +6,7 @@ angular.module('multiStepFormApp')
     $scope.reservationData = {
       job: null,
       jobType: null,
+      payment: 'Credit Card',
       additionalJobs: [],
       address: null,
       appointment: null
