@@ -1,0 +1,73 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-map-marker"></i> Where should be cleaned?
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="form-group" ng-class="{ 'has-error' : jobForm.email.$invalid && !jobForm.email.$pristine }">
+        <div class="col-xs-6">
+          <input class="form-control input-lg" type="email" required ng-model="reservationData.email"
+                 placeholder="Email*" name="email">
+
+          <div ng-show="jobForm.$submitted || jobForm.email.$touched">
+            <div ng-show="jobForm.email.$error.required" class="alert alert-danger" role="alert">Please provide an email
+              address
+            </div>
+            <div ng-show="jobForm.email.$error.email" class="alert alert-danger" role="alert">This is not a valid email
+              address.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+      <div class="col-xs-6">
+        <input class="form-control input-lg" name="name" type="text" required ng-model="reservationData.name"
+               placeholder="Name*">
+
+        <div ng-show="jobForm.$submitted || jobForm.name.$touched">
+          <div ng-show="jobForm.name.$error.required" class="alert alert-danger" role="alert">Please provide name.</div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <input class="form-control input-lg" name="surname" type="text" required ng-model="reservationData.surname"
+               placeholder="Surname*">
+
+        <div ng-show="jobForm.$submitted || jobForm.surname.$touched">
+          <div ng-show="jobForm.surname.$error.required" class="alert alert-danger" role="alert">Please provide
+            surname.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+      <div class="col-xs-12">
+        <input class="form-control input-lg" required name="address" type="text" ng-autocomplete
+               ng-model="reservationData.address"
+               details="reservationData.addressDetails" placeholder="Address*"/>
+
+        <div ng-show="jobForm.$submitted || jobForm.address.$touched">
+          <div ng-show="jobForm.address.$error.required" class="alert alert-danger" role="alert">Please provide valid
+            address.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+      <div class="col-xs-12">
+        <input class="form-control input-lg" name="telephone" type="text" required ng-model="reservationData.telephone"
+               placeholder="Telephone*">
+
+        <div ng-show="jobForm.$submitted || jobForm.telephone.$touched">
+          <div ng-show="jobForm.telephone.$error.required" class="alert alert-danger" role="alert">Please provide
+            telephone number.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div align="right" style="margin-top: 10px">
+      <a ui-sref="form.time" class="btn btn-default" ng-disabled="jobForm.$invalid" ng-click="searchForAppointments()">Next <i
+        class="fa fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>

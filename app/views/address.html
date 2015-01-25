@@ -1,0 +1,24 @@
+<div class="row" style="margin-top: 10px">
+  <div class="col-xs-12">
+    <input class="form-control input-lg" required type="text" ng-autocomplete ng-model="reservationData.address"
+           details="reservationData.addressDetails" placeholder="Address*"/>
+  </div>
+</div>
+<div ng-show="reservationData.address">
+  <div class="row" style="margin-top: 10px">
+    <div class="col-xs-12">
+      <input class="form-control input-lg" required type="text"
+             ng-model="reservationData.addressDetails.address_components[0].long_name" placeholder="Street*"/>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 10px">
+    <div class="col-xs-6">
+      <input class="form-control input-lg" required type="text" ng-model="reservationData.number"
+             placeholder="Number*"/>
+    </div>
+    <div class="col-xs-6">
+      <input class="form-control input-lg" required type="text"
+             ng-model="reservationData.addressDetails.address_components[1].long_name" placeholder="City*"/>
+    </div>
+  </div>
+</div>
