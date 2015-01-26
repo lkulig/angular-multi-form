@@ -4,69 +4,69 @@
   </div>
   <div class="panel-body">
     <div class="list-group">
-      <div class="list-group-item" ng-show="reservationData.job">
+      <div class="list-group-item" ng-show="job">
         <div class="row">
           <div class="col-xs-1">
             <i class="fa fa-check"></i>
           </div>
-          <div class="col-xs-8">{{totalTime | timeFilter}} Booked
+          <div class="col-xs-8">{{totalTime | TimeFilter}} Booked
           </div>
           <div class="col-xs-1">
             <a ui-sref=".details"><i class="fa fa-pencil"></i></a>
           </div>
         </div>
         <div class="row">
-          <div ng-repeat="additionalJob in reservationData.additionalJobs">
+          <div ng-repeat="additionalJob in additionalJobs">
             <div class="col-xs-8 col-xs-offset-1">
               <span class="center-block text-muted small"><i class="fa fa-plus"></i> {{additionalJob.job}}</span>
             </div>
             <div class="col-xs-2">
-              <span class="text-muted small">{{additionalJob.timeAmount | timeFilter}}</span>
+              <span class="text-muted small">{{additionalJob.timeAmount | TimeFilter}}</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="list-group-item" ng-show="reservationData.address">
+      <div class="list-group-item" ng-show="contactDetails.address">
         <div class="row">
           <div class="col-xs-1">
             <i class="fa fa-check"></i>
           </div>
-          <div class="col-xs-8">{{reservationData.address}}
+          <div class="col-xs-8">{{contactDetails.address}}
           </div>
           <div class="col-xs-1">
             <a ui-sref=".address"><i class="fa fa-pencil"></i></a>
           </div>
         </div>
       </div>
-      <div class="list-group-item" ng-show="reservationData.appointment">
+      <div class="list-group-item" ng-show="appointment">
         <div class="row">
           <div class="col-xs-1">
             <i class="fa fa-check"></i>
           </div>
-          <div class="col-xs-8"> {{reservationData.appointment.time | date:'dd-MM-yyyy'}}
+          <div class="col-xs-8"> {{appointment.time | date:'dd-MM-yyyy'}}
           </div>
           <div class="col-xs-1">
             <a ui-sref=".time"><i class="fa fa-pencil"></i></a>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2" style="padding-left: 0px">{{reservationData.appointment.title}}
+          <div class="col-xs-6 col-xs-offset-2" style="padding-left: 0px">{{appointment.title}}
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2" style="padding-left: 0px">{{reservationData.jobType.name}}
+          <div class="col-xs-6 col-xs-offset-2" style="padding-left: 0px">{{jobType.name}}
           </div>
         </div>
       </div>
-      <div class="list-group-item" ng-show="reservationData.payment">
+      <div class="list-group-item" ng-show="payment">
         <div class="row">
           <div class="col-xs-1">
             <i class="fa fa-check"></i>
           </div>
-          <div class="col-xs-8"> {{reservationData.payment}}
+          <div class="col-xs-8"> {{payment}}
           </div>
           <div class="col-xs-1">
-            <a ui-sref=".time"><i class="fa fa-pencil"></i></a>
+            <a ui-sref=".payment"><i class="fa fa-pencil"></i></a>
           </div>
         </div>
       </div>

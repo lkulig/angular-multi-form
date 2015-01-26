@@ -10,7 +10,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -74,22 +74,28 @@
     <script src="bower_components/ngAutocomplete/src/ngAutocomplete.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
-    <script src="bower_components/fullcalendar/fullcalendar.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
     <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/form.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/directives/order-summary-preview.js"></script>
-        <script src="scripts/services/job-service.js"></script>
-        <script src="scripts/filters/job-details-filter.js"></script>
-        <script src="scripts/filters/number-filter.js"></script>
-        <script src="scripts/filters/time-filter.js"></script>
-        <script src="scripts/services/cleaning-appointments.js"></script>
-        <script src="scripts/directives/address.js"></script>
+        <script src="scripts/controllers/form.controller.js"></script>
+        <script src="scripts/directives/order.summary.preview.directive.js"></script>
+        <script src="scripts/services/job.service.js"></script>
+        <script src="scripts/filters/job.details.filter.js"></script>
+        <script src="scripts/filters/number.filter.js"></script>
+        <script src="scripts/filters/time.filter.js"></script>
+        <script src="scripts/services/cleaning.appointments.service.js"></script>
+        <script src="scripts/controllers/form.address.controller.js"></script>
+        <script src="scripts/controllers/form.details.controller.js"></script>
+        <script src="scripts/controllers/form.date.controller.js"></script>
+        <script src="scripts/controllers/form.payment.controller.js"></script>
+        <script src="scripts/controllers/from.summary.controller.js"></script>
+        <script src="scripts/services/submission.service.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('multiStepFormApp')
-  .filter('numberFilter', function () {
+  .filter('NumberFilter', function () {
     return function (n, len) {
       var num = parseInt(n, 10);
       len = parseInt(len, 10);

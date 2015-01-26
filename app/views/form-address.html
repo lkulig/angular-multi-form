@@ -6,7 +6,7 @@
     <div class="row">
       <div class="form-group" ng-class="{ 'has-error' : jobForm.email.$invalid && !jobForm.email.$pristine }">
         <div class="col-xs-6">
-          <input class="form-control input-lg" type="email" required ng-model="reservationData.email"
+          <input class="form-control input-lg" type="email" required ng-model="contactDetails.email"
                  placeholder="Email*" name="email">
 
           <div ng-show="jobForm.$submitted || jobForm.email.$touched">
@@ -22,7 +22,7 @@
     </div>
     <div class="row" style="margin-top: 10px">
       <div class="col-xs-6">
-        <input class="form-control input-lg" name="name" type="text" required ng-model="reservationData.name"
+        <input class="form-control input-lg" name="name" type="text" required ng-model="contactDetails.name"
                placeholder="Name*">
 
         <div ng-show="jobForm.$submitted || jobForm.name.$touched">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="col-xs-6">
-        <input class="form-control input-lg" name="surname" type="text" required ng-model="reservationData.surname"
+        <input class="form-control input-lg" name="surname" type="text" required ng-model="contactDetails.surname"
                placeholder="Surname*">
 
         <div ng-show="jobForm.$submitted || jobForm.surname.$touched">
@@ -43,8 +43,8 @@
     <div class="row" style="margin-top: 10px">
       <div class="col-xs-12">
         <input class="form-control input-lg" required name="address" type="text" ng-autocomplete
-               ng-model="reservationData.address"
-               details="reservationData.addressDetails" placeholder="Address*"/>
+               ng-model="contactDetails.address"
+               details="contactDetails.addressDetails" placeholder="Address*"/>
 
         <div ng-show="jobForm.$submitted || jobForm.address.$touched">
           <div ng-show="jobForm.address.$error.required" class="alert alert-danger" role="alert">Please provide valid
@@ -55,7 +55,7 @@
     </div>
     <div class="row" style="margin-top: 10px">
       <div class="col-xs-12">
-        <input class="form-control input-lg" name="telephone" type="text" required ng-model="reservationData.telephone"
+        <input class="form-control input-lg" name="telephone" type="text" required ng-model="contactDetails.telephone"
                placeholder="Telephone*">
 
         <div ng-show="jobForm.$submitted || jobForm.telephone.$touched">
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div align="right" style="margin-top: 10px">
-      <a ui-sref="form.time" class="btn btn-default" ng-disabled="jobForm.$invalid" ng-click="searchForAppointments()">Next <i
+      <a ui-sref="form.time" class="btn btn-default" ng-disabled="jobForm.$invalid" ng-click="processToNextStep()">Next <i
         class="fa fa-chevron-right"></i></a>
     </div>
   </div>

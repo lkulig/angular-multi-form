@@ -1,1 +1,130 @@
-<p>This is the form-summary view.</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-file"></i> Order Summary
+    </div>
+    <div class="panel-body">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-file"></i> Order Details <a ui-sref="form.details"><i class="fa fa-pencil"></i></a>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="job">Job type: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="job">{{job | JobDetailsFilter}}</label>
+                    </div>
+                </div>
+                <div ng-show="additionalJobs">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <label>Additional Jobs: </label>
+                        </div>
+                    </div>
+                    <div id=additional" class="row" ng-repeat="job in additionalJobs">
+                        <div class="col-xs-6 col-xs-offset-2">
+                            <label>{{job.job}} {{job.timeAmount | TimeFilter}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-map-marker"></i> Contact Details <a ui-sref="form.address"><i class="fa fa-pencil"></i></a>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="email">Email: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="email">{{contactDetails.email}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="name">Name: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="name">{{contactDetails.name}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="surname">Surname: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="surname">{{contactDetails.surname}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="telephone">Telephone: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="telephone">{{contactDetails.telephone}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="address">Address: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="address">{{contactDetails.address}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-calendar"></i> Date <a ui-sref="form.time"><i class="fa fa-pencil"></i></a>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="when">When: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="when">{{appointment.title}} {{appointment.time | date}}</label>
+                    </div>
+                </div>
+                <div ng-show="jobType">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <label for="jobType">Job Type: </label>
+                        </div>
+                        <div class="col-xs-6">
+                            <label id="jobType">{{jobType.name}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-credit-card"></i> Payment <a ui-sref="form.payment"><i class="fa fa-pencil"></i></a>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="payment">Type: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="payment">{{payment}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label for="price">Total Price: </label>
+                    </div>
+                    <div class="col-xs-7">
+                        <label id="price">{{totalPrice| currency}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default pull-right" ng-click="submit()">Submit</button>
+    </div>
+</div>
